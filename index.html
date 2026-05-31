@@ -42,7 +42,7 @@
         /* --- HEADER / PROFILE SECTION --- */
         header {
             text-align: center;
-            padding: 60px 0 40px 0;
+            padding: 60px 0 30px 0;
             position: relative;
         }
 
@@ -102,7 +102,7 @@
         /* --- ABONE OL BUTONU --- */
         .subscribe-container {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .sub-btn {
@@ -138,6 +138,82 @@
             color: #000000;
         }
 
+        /* --- GERİ SAYIM SAYACI KARTI --- */
+        .countdown-card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            margin-bottom: 30px;
+        }
+
+        .countdown-card h3 {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .countdown-card h3 i {
+            color: var(--primary);
+        }
+
+        .timer-display {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .time-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(157, 78, 221, 0.2);
+            padding: 15px;
+            border-radius: 12px;
+            min-width: 80px;
+            box-shadow: 0 0 15px rgba(157, 78, 221, 0.1);
+        }
+
+        .time-num {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 0 10px var(--secondary);
+            line-height: 1;
+        }
+
+        .time-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-top: 5px;
+            display: block;
+        }
+
+        #stream-status-text {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--kick-green);
+            text-shadow: 0 0 20px var(--kick-green);
+            display: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
         /* --- ANA İÇERİK GRID --- */
         .main-grid {
             display: grid;
@@ -149,6 +225,13 @@
         @media (max-width: 768px) {
             .main-grid {
                 grid-template-columns: 1fr;
+            }
+            .time-box {
+                min-width: 65px;
+                padding: 10px;
+            }
+            .time-num {
+                font-size: 1.7rem;
             }
         }
 
@@ -272,6 +355,31 @@
             </a>
         </div>
 
+        <div class="countdown-card">
+            <h3 id="countdown-title"><i class="fas fa-clock"></i> Bir Sonraki Yayına Kalan Süre</h3>
+            
+            <div class="timer-display" id="timer-wrapper">
+                <div class="time-box">
+                    <span class="time-num" id="days">00</span>
+                    <span class="time-label">Gün</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-num" id="hours">00</span>
+                    <span class="time-label">Saat</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-num" id="minutes">00</span>
+                    <span class="time-label">Dakika</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-num" id="seconds">00</span>
+                    <span class="time-label">Saniye</span>
+                </div>
+            </div>
+
+            <div id="stream-status-text"><i class="fas fa-play-circle"></i> YAYIN BAŞLADI!</div>
+        </div>
+
         <div class="main-grid">
             
             <div class="card">
@@ -323,19 +431,4 @@
                     <a href="https://www.bynogame.com/" target="_blank" class="donate-link bynogame">
                         <i class="fas fa-credit-card"></i> ByNoGame
                     </a>
-                    <a href="https://www.oyunfor.com/" target="_blank" class="donate-link oyunfor">
-                        <i class="fas fa-gamepad"></i> Oyunfor
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <footer>
-            <p>&copy; 2026 skyrairl. Tüm Hakları Saklıdır. | Designed by Soner</p>
-        </footer>
-
-    </div>
-
-</body>
-</html>
+                    <a href="https://www.oy
