@@ -5,7 +5,6 @@
     <title>aydamiiy | Bio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Eski arka plan stili */
         body { 
             background-color: #0b0710; 
             background-image: radial-gradient(circle at 50% 50%, #1a1226 0%, #0b0710 100%);
@@ -16,14 +15,16 @@
             padding: 20px; 
         }
         
-        .profile-img { width: 120px; height: 120px; border-radius: 50%; border: 4px solid #ff007f; padding: 4px; margin-top: 40px; }
-        .status-badge { background: #ff007f; color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; display: inline-block; margin-top: -15px; text-transform: uppercase; letter-spacing: 1px; }
+        /* Orta Hizalı Profil Alanı */
+        .profile-section { margin-top: 40px; display: flex; flex-direction: column; align-items: center; }
+        .profile-img { width: 120px; height: 120px; border-radius: 50%; border: 4px solid #ff007f; padding: 4px; }
+        .status-badge { background: #ff007f; color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; margin-top: -15px; text-transform: uppercase; }
         h1 { color: #ff007f; margin: 10px 0; font-size: 2em; }
 
+        /* Buton ve Sayaç Yan Yana */
         .top-section { display: flex; justify-content: center; gap: 20px; align-items: center; margin-top: 20px; flex-wrap: wrap; }
-        
-        .btn-sub { background: #1e1e1e; color: #00ff00; border: 2px solid #00ff00; padding: 15px 40px; border-radius: 12px; font-weight: bold; text-decoration: none; display: block; transition: 0.3s; }
-        .btn-sub:hover { background: #00ff00; color: #000; }
+        .btn-follow { background: #1e1e1e; color: #00ff00; border: 2px solid #00ff00; padding: 15px 40px; border-radius: 12px; font-weight: bold; text-decoration: none; transition: 0.3s; }
+        .btn-follow:hover { background: #00ff00; color: #000; }
         
         .timer-container { background: #16121d; padding: 15px; border-radius: 15px; border: 1px solid #333; }
         .timer { display: flex; gap: 10px; }
@@ -36,13 +37,15 @@
 </head>
 <body>
 
-    <img src="profil.png" alt="Aydamiyy" class="profile-img">
-    <div class="status-badge">CANLI YAYINDA</div>
-    <h1>aydamiiy</h1>
-    <p>Kick Streamer & İçerik Üreticisi</p>
+    <div class="profile-section">
+        <img src="profil.png" alt="Aydamiyy" class="profile-img">
+        <div class="status-badge">CANLI YAYINDA</div>
+        <h1>aydamiiy</h1>
+        <p>Kick Streamer & İçerik Üreticisi</p>
+    </div>
 
     <div class="top-section">
-        <a href="#" class="btn-sub">✓ Abone Ol</a>
+        <a href="#" class="btn-follow">✓ Takip Et</a>
         
         <div class="timer-container">
             <div style="color: #ff007f; font-weight: bold; font-size: 11px; margin-bottom: 5px; text-transform: uppercase;">BİR SONRAKİ YAYINA KALAN SÜRE</div>
