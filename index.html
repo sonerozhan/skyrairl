@@ -5,58 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aydamiiy | Bio</title>
     <style>
-        body {
-            background-color: #0b0710;
-            color: #ffffff;
-            font-family: sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
-        .profile-container {
-            margin-top: 50px;
-        }
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid #ff007f;
-            padding: 4px;
-        }
-        .status-badge {
-            background: #ff007f;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            display: inline-block;
-            margin-top: -10px;
-        }
+        body { background-color: #0b0710; color: #ffffff; font-family: sans-serif; text-align: center; margin: 0; padding: 20px; }
+        .profile-img { width: 120px; height: 120px; border-radius: 50%; border: 4px solid #ff007f; padding: 4px; margin-top: 40px; }
+        .status-badge { background: #ff007f; color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; display: inline-block; margin-top: -15px; }
         h1 { color: #ff007f; margin: 10px 0; }
-        .btn-sub {
-            background: #1e1e1e;
-            color: #00ff00;
-            border: 2px solid #00ff00;
-            padding: 10px 40px;
-            border-radius: 20px;
-            font-weight: bold;
-            display: inline-block;
-            margin: 20px 0;
-            text-decoration: none;
-        }
+        .btn-sub { background: #1e1e1e; color: #00ff00; border: 2px solid #00ff00; padding: 10px 40px; border-radius: 20px; font-weight: bold; display: inline-block; margin: 20px 0; text-decoration: none; }
+        
+        /* Sayaç Bölümü */
+        .timer-title { color: #ff007f; margin-top: 30px; font-weight: bold; }
+        .timer { display: flex; justify-content: center; gap: 10px; margin-top: 10px; }
+        .time-box { background: #1e1e1e; padding: 10px; border-radius: 10px; width: 50px; }
+        .time-box div { font-size: 18px; font-weight: bold; }
+        .time-box span { font-size: 10px; color: #888; }
+
+        /* Program Bölümü */
+        .program-container { border: 1px solid #333; margin: 30px auto; max-width: 350px; padding: 20px; border-radius: 10px; text-align: left; }
+        .program-title { color: #ff007f; margin-bottom: 10px; }
+        .day { margin: 10px 0; border-bottom: 1px solid #333; padding-bottom: 5px; }
     </style>
 </head>
 <body>
 
-    <div class="profile-container">
-        <!-- profil.png dosyasını GitHub'a yüklediğinden emin ol -->
-        <img src="profil.png" alt="Aydamiyy" class="profile-img">
-        <div class="status-badge">CANLI YAYINDA</div>
-        
-        <h1>aydamiiy</h1>
-        <p>Kick Streamer & İçerik Üreticisi</p>
+    <img src="profil.png" alt="Aydamiyy" class="profile-img">
+    <div class="status-badge">CANLI YAYINDA</div>
+    <h1>aydamiiy</h1>
+    <p>Kick Streamer & İçerik Üreticisi</p>
+    <a href="#" class="btn-sub">✓ Abone Ol</a>
 
-        <a href="#" class="btn-sub">✓ Abone Ol</a>
+    <div class="timer-title">🕒 BİR SONRAKİ YAYINA KALAN SÜRE</div>
+    <div class="timer">
+        <div class="time-box"><div>00</div><span>GÜN</span></div>
+        <div class="time-box"><div>00</div><span>SAAT</span></div>
+        <div class="time-box"><div>00</div><span>DAKİKA</span></div>
+        <div class="time-box"><div>00</div><span>SANİYE</span></div>
+    </div>
+
+    <div class="program-container">
+        <h3 class="program-title">📅 Yayın Programı</h3>
+        <div class="day">Pazartesi</div>
+        <div class="day">Çarşamba</div>
+        <div class="day">Cuma</div>
     </div>
 
 </body>
