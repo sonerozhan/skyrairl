@@ -52,28 +52,19 @@ body{
 }
 
 .profile{
-   .profile{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center
     text-align:center;
-}
 }
 
 .avatar{
-    width:200px;
-    height:200px;
-    display:block;
-    margin:0 auto;
+    width:180px;
+    height:180px;
     object-fit:cover;
-    object-position:center;
     border-radius:50%;
-    border:5px solid #00ff99;
+    border:4px solid #00ff99;
     box-shadow:
-        0 0 20px #00ff99,
-        0 0 50px #00ff99,
-        0 0 100px rgba(0,255,153,.4);
+    0 0 15px #00ff99,
+    0 0 35px #00ff99,
+    0 0 70px rgba(0,255,153,.35);
 }
 
 .profile h1{
